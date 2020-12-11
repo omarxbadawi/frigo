@@ -36,10 +36,11 @@
             </div>
 
             <div class='line'>
-            <button>Register</button>
+            <button class='button'>Log In</button>
             </div>
 
-            </form> 
+            </form>
+      		<a href=register.php>Create a new account</a>
         </div>
         ";
         echo($regForm);
