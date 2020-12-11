@@ -2,9 +2,12 @@
 <html>
     <head>
         <title>Register</title>
+        <link rel="stylesheet" href="register.css">
     </head>
     <body>
-        <h1>Registration Page</h1>
+        <div id="headerwrap">
+            <h1>Frigo</h1>
+        </div>
         <?php 
             if (!isset($_POST['fn'])){
                 echo("<p>Please complete the form to register.</p>");
@@ -26,24 +29,42 @@
         $regForm = "
         <div id='myForm'>
             <form method='POST' action='register.php'>
-            <label>Forename:</label>
+
+            <div class='line'>
+            <label class='label'>Forename:</label>
                 <input type='text' name='fn' id='fn' value='$fn' required><br>
-            <label>Surname:</label>
+            </div>
+
+            <div class='line'>
+            <label class='label'>Surname:</label>
                 <input type='text' name='sn' id='sn' value='$sn' required><br>
-            <label>Email:</label>
+            </div>
+
+            <div class='line'>
+            <label class='label'>Email:</label>
                 <input type='email' name='email' id='email' required><br>
-            <label>Confirm Email:</label>
+            </div>
+
+            <div class='line'>
+            <label class='label'>Confirm Email:</label>
                 <input type='email' name='cemail' id='email' required><br>
-            <label>Password:</label>
+            </div>
+
+            <div class='line'>
+            <label class='label'>Password:</label>
                 <input type='password' name='pw' value='$pw' required><br>
+            </div>
+
+            <div class='line'>
             <button>Register</button>
+            </div>
             </form> 
         </div>
         ";
         echo($regForm);
     }
     function processUserDetails(){
-        $testMsgs = true; // true = On, false = Off.
+        $testMsgs = false; // true = On, false = Off.
         
         require('conn.php');
 
@@ -64,6 +85,9 @@
             if (strpos($result, 'Duplicate entry') !== false){
                 echo("The email address you provided is already in user. Try another address");
                 getUserDetails();
+            } else{
+                header("location:logIn.php");
+                exit();
             }
         }
     }
