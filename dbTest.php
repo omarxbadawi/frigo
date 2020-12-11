@@ -52,6 +52,16 @@
     ";
     doSQL($mysqli, $sql, $testMsgs);
 
+    $sql = "
+    CREATE TABLE user_rec (
+        ing_id INT(6) NOT NULL,
+        rec_id INT(6) NOT NULL,
+        date_added DATE NOT NULL,
+        PRIMARY KEY (ing_id, rec_id)
+    )
+    ";
+    doSQL($mysqli, $sql, $testMsgs);
+
 
     function doSQL($mysqli, $sql, $testMsgs){
         if ($testMsgs){
