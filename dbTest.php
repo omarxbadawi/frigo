@@ -1,9 +1,7 @@
 <?php 
     $testMsgs = true; // true = On, false = Off.
 
-    require_once('config.inc.php');
-
-    $mysqli = new mysqli($database_host, $database_user, $database_pass, $group_dbnames[0]);
+    require('conn.php');
 
     //Check connection
     if($mysqli -> connect_error) {
