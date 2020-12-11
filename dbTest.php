@@ -59,7 +59,7 @@
             if ($result = $mysqli->query($sql)){
                 echo("<code> - OK</code>");
             } else{
-                echo("<code> - FAIL! " . $conn->error . " </code>");
+                echo("<code> - FAIL! " . $mysqli->error . " </code>");
             }
         } else{
             $result = $mysqli->query($sql);
