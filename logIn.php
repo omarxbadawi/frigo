@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+    session_start();
+?>
 <html>
     <head>
         <title>Register</title>
@@ -66,7 +69,7 @@
 	                echo("Invalid login details");
 	                getUserDetails();
 	            } elseif (password_verify($frmPW, $result['password']) and $frmEM == $result['email']){
-	            	echo("IFBAIF");
+	            	$_SESSION['loggedIn'] = $result['user_id'];
 	                header("location:home.php");
 	                exit();
             	}
