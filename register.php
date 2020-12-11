@@ -56,9 +56,10 @@
             </div>
 
             <div class='line'>
-            <button>Register</button>
+            <button class='button'>Register</button>
             </div>
-            </form> 
+            </form>
+            <a href=logIn.php>Login Page</a> 
         </div>
         ";
         echo($regForm);
