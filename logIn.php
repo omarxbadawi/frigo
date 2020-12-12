@@ -11,14 +11,19 @@
         <div id="headerwrap">
             <h1>Frigo</h1>
         </div>
-        <?php 
-            if (!isset($_POST['em'])){
-                echo("<p>Log In</p>");
-                getUserDetails();
-            } else{
-                processUserDetails();
-            } 
-        ?>
+        <main>
+            <div id="background">
+                <div id="contentBox">
+                    <?php 
+                        if (!isset($_POST['em'])){
+                            getUserDetails();
+                        } else{
+                            processUserDetails();
+                        } 
+                    ?>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
 <?php
@@ -26,21 +31,13 @@
         $em = $pw = "";
         $regForm = "
         <div id='myForm'>
+            <p>Log In</p>
             <form method='POST' action='logIn.php'>
+            <input type='text' name='em' id='em' value='$em' placeholder='Email Address' class='enterDetails' required><br>
 
-            <div class='line'>
-            <label class='label'>Email:</label>
-                <input type='text' name='em' id='em' value='$em' required><br>
-            </div>
+            <input type='password' name='pw' id='pw' value='$pw' placeholder='Password' class='enterDetails' required><br>
 
-            <div class='line'>
-            <label class='label'>Password:</label>
-                <input type='password' name='pw' id='pw' value='$pw' required><br>
-            </div>
-
-            <div class='line'>
             <button class='button'>Log In</button>
-            </div>
 
             </form>
       		<a href=register.php>Create a new account</a>

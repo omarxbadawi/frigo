@@ -13,7 +13,6 @@
         </div>
         <?php 
             if (!isset($_POST['fn'])){
-                echo("<p>Please complete the form to register.</p>");
                 getUserDetails();
             } else{
                 processUserDetails();
@@ -31,36 +30,19 @@
         }
         $regForm = "
         <div id='myForm'>
+            <p>Register</p>
             <form method='POST' action='register.php'>
+                <input type='text' name='fn' id='fn' value='$fn' placeholder='First Name' class='enterDetails' required><br>
 
-            <div class='line'>
-            <label class='label'>Forename:</label>
-                <input type='text' name='fn' id='fn' value='$fn' required><br>
-            </div>
+                <input type='text' name='sn' id='sn' value='$sn' placeholder='Last Name' class='enterDetails' required><br>
 
-            <div class='line'>
-            <label class='label'>Surname:</label>
-                <input type='text' name='sn' id='sn' value='$sn' required><br>
-            </div>
+                <input type='email' name='email' id='email' placeholder='Email Address' class='enterDetails' required><br>
 
-            <div class='line'>
-            <label class='label'>Email:</label>
-                <input type='email' name='email' id='email' required><br>
-            </div>
+                <input type='email' name='cemail' id='email' placeholder='Confirm Email Address' class='enterDetails' required><br>
 
-            <div class='line'>
-            <label class='label'>Confirm Email:</label>
-                <input type='email' name='cemail' id='email' required><br>
-            </div>
+                <input type='password' name='pw' value='$pw' placeholder='Password' class='enterDetails' required><br>
 
-            <div class='line'>
-            <label class='label'>Password:</label>
-                <input type='password' name='pw' value='$pw' required><br>
-            </div>
-
-            <div class='line'>
             <button class='button'>Register</button>
-            </div>
             </form>
             <a href=logIn.php>Login Page</a> 
         </div>
