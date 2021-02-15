@@ -1,0 +1,72 @@
+html{
+    height: 100%;}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+body{
+    background-color: #ffa500;
+}
+#headerwrap{
+    color: white;
+    height: 100px;
+    display: block;
+    background-color: #53D1CF;
+}
+#footerwrap{
+    color: white;
+    height: 100px;
+    display: block;
+    background-color: #53D1CF;
+}
+h1{
+    font-size: 60px;
+    text-align: center;
+    color:white;
+    line-height: 100px;
+    /* font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif; */
+}
+.main-content{
+    /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+    flex: 1 0 auto;}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;}
+footer
+{
+    background-color: #53D1CF;
+    color: white;
+    height: 70px;
+    display: flex; 
+    justify-content: center; 
+    text-align: center;
+    align-items: Center; 
+    flex:0 0 auto;
+}
+ul 
+{
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #816551;
+}
+  
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover {
+background-color: #111;
+}

@@ -3,20 +3,31 @@
     session_start();
 ?>
 <html>
-    <head>
-        <title>Register</title>
-        <link rel="stylesheet" href="register.css">
+<head>
+        <title>Account</title>
+        <link rel="stylesheet" href="home.css">
     </head>
     <body>
-        <div id="headerwrap">
-            <h1>Frigo</h1>
+        <header>
+            <h1  id="headerwrap">FRIGO</h1>
+        </header>
+            <ul>
+                <li><a class="active" href="choose_ingredients.html">Ingredients</a></li>
+                <li><a href="recipe_instructions.html">Recipes</a></li>
+                <li><a href="myAccount.php">My Account</a></li>
+                <li><a href="settings.html">Website Settings</a></li>
+            </ul>
+        <div class = "main-content">
+        <main>
+				<h2>account managements </h2>
+				<p>recipe used: </p>
+				<p>recipe liked: </p>
+			</main>
         </div>
-        <?php 
-        	echo($_SESSION['loggedIn']);
-    		if (!isset($change)){
-    			displayDetails();
-    		}
-        ?>
+        <footer> 
+            <p>contact us</p>
+        </footer>
+
     </body>
 </html>
 <?php

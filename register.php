@@ -8,9 +8,9 @@
         <link rel="stylesheet" href="register.css">
     </head>
     <body>
-        <div id="headerwrap">
-            <h1>Frigo</h1>
-        </div>
+        <header>
+            <h1  id="headerwrap">FRIGO</h1>
+        </header>
         <?php 
             if (!isset($_POST['fn'])){
                 getUserDetails();
