@@ -1,6 +1,6 @@
 <!-- ingredients choosing page -->
 
-<!--Code to retrieve all possible ingredients from the API -->
+<!--Code to retrieve all possible ingredients from the API-->
 <?php
             $curl = curl_init();
 
