@@ -1,27 +1,7 @@
 <!-- ingredients choosing page -->
-<!DOCTYPE html>
-<html lang="en">
-  <link rel="stylesheet" href="home.css">
-  <head>
-    <title>Ingredients</title>
-    <link rel="stylesheet" href="home.css">
-    </head>
-    <body>
-      <header>
-        <h1  id="headerwrap">FRIGO</h1>
-      </header>
-        <ul>
-          <li><a class="active" href="choose_ingredients.html">Ingredients</a></li>
-          <li><a href="recipe_instructions.html">Recipes</a></li>
-          <li><a href="myAccount.php">My Account</a></li>
-          <li><a href="settings.html">Website Settings</a></li>
-        </ul>
-      <div class = "main-content">
-        <main>
-          <h2>You will need to chose your ingredients here</h2>
 
-          <!--Code to retrieve all possible ingredients from the API -->
-          <?php
+<!--Code to retrieve all possible ingredients from the API -->
+<?php
             $curl = curl_init();
 
             curl_setopt_array($curl, [
@@ -54,9 +34,47 @@
 
             #each ingredient is  held in "$ingredient['strIngredient']", this data needs to be made into a search system of some sort, to pick out your ingredients.
             foreach ($response as $ingredient){
-              echo($ingredient['strIngredient'] . "<br>");
+              #echo($ingredient['strIngredient'] . "<br>");
             }
     ?>
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="home.css">
+  <head>
+    <title>Ingredients</title>
+    <link rel="stylesheet" href="home.css">
+    </head>
+    <body>
+      <header>
+        <h1  id="headerwrap">FRIGO</h1>
+      </header>
+        <ul>
+          <li><a class="active" href="choose_ingredients.html">Ingredients</a></li>
+          <li><a href="recipe_instructions.html">Recipes</a></li>
+          <li><a href="myAccount.php">My Account</a></li>
+          <li><a href="settings.html">Website Settings</a></li>
+        </ul>
+      <div class = "main-content">
+        <main>
+          <h2>You will need to chose your ingredients here</h2>
+          <form method="GET">
+            <input type="text" placeholder="Search..." name="search">
+            <button type="submit"></button>
+          </form>
+          <?php
+            if (!isset($_GET['search'])){
+              #echo("Not set");
+            } else{;
+              $search = $_GET['search'];
+              foreach ($response as $ingredient){
+                similar_text($search, $ingredient['strIngredient'], $percent);
+                if ($percent >= 40){
+                  echo ($ingredient['strIngredient'] . "<br>");
+                }
+              }
+            }
+          ?>
+          
           
 
         </main>
