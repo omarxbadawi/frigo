@@ -28,7 +28,7 @@
 			  $curl = curl_init();
 
 			  curl_setopt_array($curl, [
-			    CURLOPT_URL => "https://www.themealdb.com/api/json/v2/9973533/lookup.php?i=52772",
+			    CURLOPT_URL => "https://www.themealdb.com/api/json/v2/9973533/randomselection.php",
 			    CURLOPT_RETURNTRANSFER => true,
 			    CURLOPT_FOLLOWLOCATION => true,
 			    CURLOPT_ENCODING => "",
