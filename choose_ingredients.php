@@ -5,7 +5,7 @@
             $curl = curl_init();
 
             curl_setopt_array($curl, [
-              CURLOPT_URL => "https://themealdb.p.rapidapi.com/list.php?i=list",
+              CURLOPT_URL => "https://www.themealdb.com/api/json/v2/9973533/list.php?i=list",
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_FOLLOWLOCATION => true,
               CURLOPT_ENCODING => "",
@@ -13,10 +13,6 @@
               CURLOPT_TIMEOUT => 30,
               CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
               CURLOPT_CUSTOMREQUEST => "GET",
-              CURLOPT_HTTPHEADER => [
-                "x-rapidapi-host: themealdb.p.rapidapi.com",
-                "x-rapidapi-key: 6009943639msh16b18fc4b42ba8ep1a7df9jsn55a697cdbcec"
-              ],
             ]);
 
             $response = curl_exec($curl);
