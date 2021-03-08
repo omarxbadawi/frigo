@@ -2,37 +2,38 @@
 
 <!--Code to retrieve all possible ingredients from the API-->
 <?php
-            $curl = curl_init();
+  $curl = curl_init();
 
-            curl_setopt_array($curl, [
-              CURLOPT_URL => "https://www.themealdb.com/api/json/v2/9973533/list.php?i=list",
-              CURLOPT_RETURNTRANSFER => true,
-              CURLOPT_FOLLOWLOCATION => true,
-              CURLOPT_ENCODING => "",
-              CURLOPT_MAXREDIRS => 10,
-              CURLOPT_TIMEOUT => 30,
-              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-              CURLOPT_CUSTOMREQUEST => "GET",
-            ]);
+  curl_setopt_array($curl, [
+    CURLOPT_URL => "https://www.themealdb.com/api/json/v2/9973533/list.php?i=list",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_ENCODING => "",
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "GET",
+  ]);
 
-            $response = curl_exec($curl);
-            $err = curl_error($curl);
+  $response = curl_exec($curl);
+  $err = curl_error($curl);
 
-            curl_close($curl);
+  curl_close($curl);
 
-            if ($err) {
-              die ("cURL Error #:" . $err);
-            } else {
-              #echo $response;
-            }
-            $response = json_decode($response, true);
-            $response = $response['meals'];
+  if ($err) {
+    die ("cURL Error #:" . $err);
+  } else {
+    #echo $response;
+  }
+  
+  $response = json_decode($response, true);
+  $response = $response['meals'];
 
-            #each ingredient is  held in "$ingredient['strIngredient']", this data needs to be made into a search system of some sort, to pick out your ingredients.
-            foreach ($response as $ingredient){
-              #echo($ingredient['strIngredient'] . "<br>");
-            }
-    ?>
+  #each ingredient is  held in "$ingredient['strIngredient']", this data needs to be made into a search system of some sort, to pick out your ingredients.
+  foreach ($response as $ingredient){
+    #echo($ingredient['strIngredient'] . "<br>");
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <link rel="stylesheet" href="home.css">
@@ -45,7 +46,7 @@
         <h1  id="headerwrap">FRIGO</h1>
       </header>
         <ul>
-          <li><a class="active" href="choose_ingredients.html">Ingredients</a></li>
+          <li><a class="active" href="choose_ingredients.php">Ingredients</a></li>
           <li><a href="recipe_instructions.html">Recipes</a></li>
           <li><a href="myAccount.php">My Account</a></li>
           <li><a href="settings.html">Website Settings</a></li>
