@@ -1,0 +1,24 @@
+#cookbook .searchline {
+  max-width: 600px;
+  display: block;
+  margin: auto;
+}
+#cookbook .resultlist {
+  padding: 0 10px;
+}
+.fn-clear {
+  overflow: hidden;
+}
+.rightbtn {
+  float: right;
+}
+.btnline {
+  text-align: right;
+  padding: 20px 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+  color: #666;
+}
+.btnline span {
+  vertical-align: middle;
+}
