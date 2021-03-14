@@ -15,6 +15,49 @@ timeline: true
 
 ---
 
+## 4.13.1
+
+`2021-03-06`
+
+- 🐞 Fix `message.config` with `prefixCls` missing animation style. [#29574](https://github.com/ant-design/ant-design/pull/29574)
+- 🐞 Fix Tooltip is not interactive when `visible` is `true` under some situation. [#29555](https://github.com/ant-design/ant-design/pull/29555)
+- 🐞 Fix ConfigProvider within multiple page switch will lose locale issue. [#29570](https://github.com/ant-design/ant-design/pull/29570)
+- 🐞 Fix Modal with hooks cannot call `update` or `destroy` before render. [#29584](https://github.com/ant-design/ant-design/pull/29584)
+- 🐞 Fix Grid throw error when client support flexGap but ssr not support. [#29586](https://github.com/ant-design/ant-design/pull/29586)
+- 🐞 Fix Select caret position when `mode="tags"` and `size="small"`. [#29561](https://github.com/ant-design/ant-design/pull/29561)
+- 🐞 Fix Carousel `dotPosition` makes `pauseOnHover` not working. [#29587](https://github.com/ant-design/ant-design/pull/29587) [@zgoby](https://github.com/zgoby)
+- 🐞 Fix Steps `responsive` prop warning. [#29599](https://github.com/ant-design/ant-design/pull/29599)
+- 🐞 Fix Upload `onChange` param of `file.originFileObj` return nest Proxy object. [#29614](https://github.com/ant-design/ant-design/pull/29614)
+- 🐞 Fix Descriptions under Table will not have 100% width. [#29630](https://github.com/ant-design/ant-design/pull/29630)
+- TypeScript
+  - 🤖 Fix Drawer type declaration of `contentWrapperStyle`. [#29571](https://github.com/ant-design/ant-design/pull/29571)
+
+`2021-02-28`
+
+- 🔥 InputNumber support `stringMode` for high precision `step`. `value` in control out of range shows warning style instead of changing it. Dynamic update `min` & `max` will not trigger `onChange` anymore. [#29373](https://github.com/ant-design/ant-design/pull/29373)
+- 🆕 Upload support `beforeUpload` return `Upload.LIST_IGNORE` to skip item added in UploadList. [#29474](https://github.com/ant-design/ant-design/pull/29474)
+- 🆕 Image support config motion name. [#29394](https://github.com/ant-design/ant-design/pull/29394) [@crazyair](https://github.com/crazyair)
+- ConfigProvider
+  - 🆕 ConfigProvider support global statistic config to support some statistic function call. [#29285](https://github.com/ant-design/ant-design/pull/29285) [@crazyair](https://github.com/crazyair)
+  - 🆕 Motion related css `className` prepend `ant-` prefix to avoid naming conflict. [#29268](https://github.com/ant-design/ant-design/pull/29268) [@crazyair](https://github.com/crazyair)
+- 🆕 Form.List nest multiple level Form.Item support `preserve` prop. [#29267](https://github.com/ant-design/ant-design/pull/29267)
+- 🆕 Drawer support `contentWrapperStyle`. [#29219](https://github.com/ant-design/ant-design/pull/29219) [@kerm1it](https://github.com/kerm1it)
+- 🆕 Layout.Sider added ref support. [#29169](https://github.com/ant-design/ant-design/pull/29169) [@qramilq](https://github.com/qramilq)
+- 🐞 Fix Table `pagination.current` display error when result of filter is empty. [#29386](https://github.com/ant-design/ant-design/pull/29386) [@jinchaofs](https://github.com/jinchaofs)
+- 🐞 Fix Anchor throws error when `target` don't return a html element. [#29523](https://github.com/ant-design/ant-design/pull/29523) [@bcd337](https://github.com/bcd337)
+- 🐞 Fix Steps with small size that icon shift up `1px`. [#29484](https://github.com/ant-design/ant-design/pull/29484)
+- Select
+  - 🐞 Fix Select `mode="tags"` large size (41px => 40px). [#29437](https://github.com/ant-design/ant-design/pull/29437)
+  - 📖 Update Select debounce demo to create DebounceSelect component for easy usage. [#29414](https://github.com/ant-design/ant-design/pull/29414)
+- Dropdown
+  - 🐞 Fix Dropdown menu item lost disable style with icon. [#29433](https://github.com/ant-design/ant-design/pull/29433)
+  - 🐞 Fix Dropdown menu not support `expandIcon`. [#29338](https://github.com/ant-design/ant-design/pull/29338)
+- 🐞 Fix tree-shaking warning on development builds. [#29378](https://github.com/ant-design/ant-design/pull/29378)
+- 🇰🇷 Fix TimePicker Korean locale. [#29540](https://github.com/ant-design/ant-design/pull/29540)
+- TypeScript
+  - 🤖 Fix Form.Item generic definition issue. [#29397](https://github.com/ant-design/ant-design/pull/29397) [@mumiao](https://github.com/mumiao)
+  - 🤖 Optimize Table `filter` definition. [#29385](https://github.com/ant-design/ant-design/pull/29385) [@mumiao](https://github.com/mumiao)
+
 ## 4.12.3
 
 `2021-02-10`
@@ -291,7 +334,7 @@ It is a wrong release which same as `4.10.3`, don't use it.
 - 🆕 Alert support `action` prop. [#25892](https://github.com/ant-design/ant-design/pull/25892) [@jesse3mh9a](https://github.com/jesse3mh9a)
 - 🔥 Tree refactor drag behavior. Add `dropIndicatorRender` and `allowDrop` prop. [#26462](https://github.com/ant-design/ant-design/pull/26462) [@07akioni](https://github.com/07akioni)
 - 🆕 Space support `wrap` for auto break line. [#27910](https://github.com/ant-design/ant-design/pull/27910)
-- 🆕 Descriptions.Item support `labelStyle` &amp; `contentStyle` props. [#27897](https://github.com/ant-design/ant-design/pull/27897)
+- 🆕 Descriptions.Item support `labelStyle` & `contentStyle` props. [#27897](https://github.com/ant-design/ant-design/pull/27897)
 - 🆕 Form.List support `initialValue`. [#27872](https://github.com/ant-design/ant-design/pull/27872)
 - 🆕 Menu supports `expandIcon`, and optimize default expand icon style. [#27565](https://github.com/ant-design/ant-design/pull/27565)
 - 🆕 Input and TextArea add `setSelectionRange` of `ref`. [#27584](https://github.com/ant-design/ant-design/pull/27584) [@appleshell](https://github.com/appleshell)
