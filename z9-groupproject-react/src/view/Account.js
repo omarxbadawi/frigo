@@ -3,7 +3,7 @@ import '.././index.css';
 import axios from 'axios';
 import { Layout, Menu,Breadcrumb} from 'antd';
 // php files run oon apache server port 80
-const API_PATH = 'http://localhost/index.php';
+const API_PATH = 'index.php';
 
 export default class Account extends React.Component {
 
@@ -23,9 +23,15 @@ export default class Account extends React.Component {
     axios({
       method: 'post',
       url: `${API_PATH}`,
-      headers: { 'content-type': 'application/json' },
+      headers: { 'content-type': 'application/json' ,"Access-Control-Allow-Origin": "*"},
       data: this.state
     })
+    .then((response) => {
+      console.log(response);
+    })
+   .catch((error)=>{
+      console.log(error);
+   });
 
   };
   render() {
