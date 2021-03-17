@@ -9,6 +9,8 @@ import Recipes from './GenerateRecipes';
 import History from './Account';
 import Settings from './Settings';
 import Account from './Account';
+import LoginPage from './LoginPage';
+import SignupPage from './SignupPage';
 /* page cookbook */
 import cookbook from './cookbook';
 /* page detail */
@@ -24,6 +26,7 @@ import {
   TeamOutlined,
   CrownOutlined
 } from '@ant-design/icons';
+import Login from './login';
 
 
 const contentStyle = {
@@ -62,7 +65,10 @@ export default class HomePage extends React.Component {
                 <Link to="/SelectIngredients">Customize Recipe</Link>
               </Menu.Item>
               <Menu.Item icon={<TeamOutlined />}>
-                <Link to="/MyAccount" >MyAccount</Link>
+                <Link to="/signup" >Signup</Link>
+              </Menu.Item>
+              <Menu.Item icon={<TeamOutlined />}>
+                <Link to="/Login" >Login</Link>
               </Menu.Item>
               <Menu.Item icon={<SettingOutlined />}>
                 <Link to="/Settings" >Settings</Link>
@@ -88,7 +94,8 @@ export default class HomePage extends React.Component {
                 {/* <Route path="/SelectIngredients" component={Ingredients}></Route> */}
                 <Route path="/RecipesGenerated" component={Recipes}></Route>
                 <Route path="/Your Recipe" component={myRecipe}></Route>
-                <Route path="/MyAccount" component={Account}></Route>
+                <Route path="/signup" component={SignupPage}></Route>
+                <Route path="/login" component={LoginPage}></Route>
                 <Route path="/Settings" component={Settings}></Route>
                 {/* add page */}
                 <Route path="/SelectIngredients" component={cookbook}></Route>
