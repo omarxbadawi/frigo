@@ -3,7 +3,7 @@ import '.././index.css';
 import axios from 'axios';
 import { Layout, Menu,Breadcrumb} from 'antd';
 // php files run oon apache server port 80
-const API_PATH = 'index.php';
+const API_PATH = 'register.php';
 
 export default class SignupPage extends React.Component {
 

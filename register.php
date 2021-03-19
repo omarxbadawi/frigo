@@ -1,55 +1,13 @@
-<!DOCTYPE html>
 <?php
-    session_start();
-?>
-<html>
-    <head>
-        <title>Register</title>
-        <link rel="stylesheet" href="register.css">
-    </head>
-    <body>
-        <header>
-            <h1  id="headerwrap">FRIGO</h1>
-        </header>
-        <?php 
-            if (!isset($_POST['fn'])){
-                getUserDetails();
-            } else{
-                processUserDetails();
-            } 
-        ?>
-    </body>
-</html>
-<?php
-    function getUserDetails(){
-        $fn = $sn = $email = $pw = "";
-        if (isset($_POST['fn'])){
-            $fn = $_POST['fn'];
-            $sn = $_POST['sn'];
-            $pw = $_POST['pw'];
-        }
-        $regForm = "
-        <div id='myForm'>
-            <p>Register</p>
-            <form method='POST' action='register.php'>
-                <input type='text' name='fn' id='fn' value='$fn' placeholder='First Name' class='enterDetails' required><br>
+echo ('Axios post data successfully!!!');
+header("Access-Control-Allow-Origin: *");
 
-                <input type='text' name='sn' id='sn' value='$sn' placeholder='Last Name' class='enterDetails' required><br>
+echo file_get_contents('php://input');
+echo json_decode(file_get_contents('php://input'), true);
 
-                <input type='email' name='email' id='email' placeholder='Email Address' class='enterDetails' required><br>
+processUserDetails();
 
-                <input type='email' name='cemail' id='email' placeholder='Confirm Email Address' class='enterDetails' required><br>
-
-                <input type='password' name='pw' value='$pw' placeholder='Password' class='enterDetails' required><br>
-
-            <button class='button'>Register</button>
-            </form>
-            <a href=logIn.php>Login Page</a> 
-        </div>
-        ";
-        echo($regForm);
-    }
-    function processUserDetails(){
+function processUserDetails(){
         $testMsgs = false; // true = On, false = Off.
         
         require('conn.php');
