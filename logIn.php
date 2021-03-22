@@ -1,58 +1,19 @@
-<!DOCTYPE html>
 <?php
-    session_start();
-?>
-<html>
-    <head>
-        <title>Register</title>
-        <link rel="stylesheet" href="register.css">
-    </head>
-    <body>
-        <div id="headerwrap">
-            <h1>Frigo</h1>
-        </div>
-        <main>
-            <div id="background">
-                <div id="contentBox">
-                    <?php 
-                        if (!isset($_POST['em'])){
-                            getUserDetails();
-                        } else{
-                            processUserDetails();
-                        } 
-                    ?>
-                </div>
-            </div>
-        </main>
-    </body>
-</html>
-<?php
-    function getUserDetails(){
-        $em = $pw = "";
-        $regForm = "
-        <div id='myForm'>
-            <p>Log In</p>
-            <form method='POST' action='logIn.php'>
-            <input type='text' name='em' id='em' value='$em' placeholder='Email Address' class='enterDetails' required><br>
+    echo ('Axios post data successfully!!!');
+    header("Access-Control-Allow-Origin: *");
 
-            <input type='password' name='pw' id='pw' value='$pw' placeholder='Password' class='enterDetails' required><br>
+    echo file_get_contents('php://input');
+    echo json_decode(file_get_contents('php://input'), true);
 
-            <button class='button'>Log In</button>
-
-            </form>
-      		<a href=register.php>Create a new account</a>
-        </div>
-        ";
-        echo($regForm);
-    }
+    processUserDetails();
 
     function processUserDetails(){
     	$testMsgs = false; // true = On, false = Off.
         
         require('conn.php');
 
-        $frmEM = ($_POST['em']);
-        $frmPW = ($_POST['pw']);
+        $frmEM = ($_POST['email']);
+        $frmPW = ($_POST['Password']);
         $password = password_hash($frmPW, PASSWORD_DEFAULT);
 
         if ($frmEM == "" or $frmPW == ""){
