@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Layout, Menu,Breadcrumb} from 'antd';
 import Password from 'antd/lib/input/Password';
 // php files run oon apache server port 80
-const API_PATH = 'index.php';
+const API_PATH = 'logIn.php';
 
 export default class LoginPage extends React.Component {
 
