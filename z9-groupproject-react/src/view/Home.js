@@ -12,6 +12,10 @@ import Img7 from "../img/Homepage7.jpg"
 import Img8 from "../img/Homepage8.jpg"
 import Img9 from "../img/Homepage9.jpg"
 import Img10 from "../img/Homepage10.jpg"
+import p1 from "../img/p1.jpeg"
+import p2 from "../img/p2.jpeg"
+import p3 from "../img/p3.jpeg"
+import logo from "../img/logo.jpg"
 
 const { Title, Paragraph, Text, Link} = Typography;
 const { TabPane } = Tabs;
@@ -79,16 +83,109 @@ export default class Home extends React.Component {
           </Paragraph>
 
           <Tabs defaultActiveKey="1" centered>
-            <TabPane tab="Recent Populars" key="1">
-              Content of Tab Pane 1
+            <TabPane tab="Nutrition Notes" key="1">
+            <div>
+            <div style={{display:"inline-block"}}><img src={p3} 
+                  style={{height:"250px", width:"400px", marginLeft:"20px", marginRight:"40px"}}></img></div>
+            <div style={{display:"inline-block",marginLeft:"20px", marginRight:"20px", fontSize: 18, fontFamliy:"Arial, sans-serif"}}>
+            Eating good food, especially with family and friends, is one of the pleasures of life. We all know that people who eat healthy, balanced diets are likely to have:
+            </div>
+            </div>
+            <Paragraph style={{ marginLeft:"20px", marginRight:"20px", fontSize: 16, fontFamliy:"Arial, sans-serif",color:"#fa8c16"}}>
+              •	plenty of energy to work and enjoy themselves.
+              •	fewer infections and other illnesses.
+            </Paragraph>
+            <Paragraph style={{ marginLeft:"20px", marginRight:"20px", fontSize: 18, fontFamliy:"Arial, sans-serif"}}>
+            Children who eat well usually grow well. Women who eat well are likely to produce healthy babies. That is why it is important to know which combinations of foods make good meals and what the different food needs of different members of the family are.
+            Foods and nutrients
+            A food is something that provides nutrients. Nutrients are substances that provide:
+            </Paragraph>
+            <Paragraph style={{ marginLeft:"20px", marginRight:"20px", fontSize: 16, fontFamliy:"Arial, sans-serif",color:"#fa8c16"}}>
+
+              •	energy for activity, growth, and all functions of the body such as breathing, digesting food, and keeping warm.
+              •	materials for the growth and repair of the body, and for keeping the immune system healthy.
+
+           </Paragraph>
+
             </TabPane>
             <TabPane tab="Gym Meal Plan" key="2">
-              Content of Tab Pane 2
+            
+            <div style={{display:"inline-block"}}><img src={p1} 
+                  style={{height:"250px", width:"350px", marginLeft:"20px", marginRight:"40px"}}></img></div>
+            <Paragraph style={{ marginLeft:"20px", marginRight:"20px", fontSize: 16, fontFamliy:"Arial, sans-serif"}}>
+            Bodybuilding is centered around building your body’s muscles through weightlifting and nutrition. Whether recreational or competitive, bodybuilding is often referred to as a lifestyle, as it involves both the time you spend in and outside the gym. In order to maximize your results from the gym, you must focus on your diet.
+
+          </Paragraph>
+          <Paragraph style={{ marginLeft:"20px", marginRight:"20px", fontSize: 18, fontFamliy:"Arial, sans-serif",color:"#fa8c16"}}>
+          Foods to Focus On
+          </Paragraph>
+          <Paragraph style={{ marginLeft:"20px", marginRight:"20px", fontSize: 16, fontFamliy:"Arial, sans-serif",color:"#fa8c16"}}>
+          Meats, poultry and fish: 
+          </Paragraph>
+          Sirloin steak, ground beef, pork tenderloin, venison, chicken breast, salmon, tilapia and cod.
+          <Paragraph style={{ marginLeft:"20px", marginRight:"20px", fontSize: 16, fontFamliy:"Arial, sans-serif",color:"#fa8c16"}}>
+          Dairy: 
+          </Paragraph>
+          Yogurt, cottage cheese, low-fat milk and cheese.
+          <Paragraph style={{ marginLeft:"20px", marginRight:"20px", fontSize: 16, fontFamliy:"Arial, sans-serif",color:"#fa8c16"}}>
+          Grains ;
+          </Paragraph>
+          Bread, cereal, crackers, oatmeal, popcorn and rice.
+          <Paragraph style={{ marginLeft:"20px", marginRight:"20px", fontSize: 16, fontFamliy:"Arial, sans-serif",color:"#fa8c16"}}>
+          Fruits: 
+          </Paragraph>
+          Oranges, apples, bananas, grapes, pears, peaches, watermelon and berries.
+          <Paragraph style={{ marginLeft:"20px", marginRight:"20px", fontSize: 16, fontFamliy:"Arial, sans-serif",color:"#fa8c16"}}>
+          Starchy vegetables:
+          </Paragraph>
+          Potatoes, corn, green peas, green lima beans and.
+          <Paragraph style={{ marginLeft:"20px", marginRight:"20px", fontSize: 16, fontFamliy:"Arial, sans-serif",color:"#fa8c16"}}>
+          Vegetables:
+          </Paragraph>
+          Broccoli, spinach, leafy salad greens, tomatoes, green beans, cucumber, zucchini, asparagus, peppers and mushrooms.
+          <Paragraph style={{ marginLeft:"20px", marginRight:"20px", fontSize: 16, fontFamliy:"Arial, sans-serif",color:"#fa8c16"}}>
+          Seeds and nuts: 
+          </Paragraph>
+          Almonds, walnuts, sunflower seeds, and flax seeds.
+          <Paragraph style={{ marginLeft:"20px", marginRight:"20px", fontSize: 16, fontFamliy:"Arial, sans-serif",color:"#fa8c16"}}>
+          Beans and legumes: 
+          </Paragraph>
+          Chickpeas, lentils, kidney beans, black beans and pinto beans.
+          <Paragraph style={{ marginLeft:"20px", marginRight:"20px", fontSize: 16, fontFamliy:"Arial, sans-serif",color:"#fa8c16"}}>
+          Oils: 
+          </Paragraph>
+          Olive oil, flaxseed oil and avocado oil.
+         
+
+
             </TabPane>
             <TabPane tab="Vegetarian" key="3">
+            <div style={{display:"inline-block"}}><img src={p2} 
+                  style={{height:"250px", width:"350px", marginLeft:"20px", marginRight:"40px"}}></img></div>
             <Paragraph style={{ marginLeft:"20px", marginRight:"20px", fontSize: 18, fontFamliy:"Arial, sans-serif"}}>
-            Caponata pasta
-          </Paragraph>
+            Vegetarian cuisine is based on food that meets vegetarian standards by not including meat and animal tissue products. 
+            </Paragraph>
+           
+            
+            
+            
+            
+            <Paragraph style={{ marginLeft:"20px", marginRight:"20px", fontSize: 16, fontFamliy:"Arial, sans-serif"}}>
+            Here is a famous recipe of stir-fried vegetables.
+            How to make vegetable stir fry?
+            </Paragraph>
+            <Paragraph style={{ marginLeft:"20px", marginRight:"20px", fontSize: 16, fontFamliy:"Arial, sans-serif"}}>
+            The first step is to cook up your veggies. I used a combination of red and yellow peppers, snow peas, broccoli, carrots and mushrooms. I also added some baby corn and water chestnuts into the mix for variety. While the veggies are cooking, I make a simple garlic and ginger sauce. The sauce gets poured over the veggies then is simmered until thickened. You can enjoy your veggie stir fry as-is, or over rice.
+            </Paragraph>
+            <Text strong style={{ color: "#fa8c16",fontSize: 18,}}>•	Sauté:</Text> 
+            In a wok or large skillet add 1 Tablespoon olive oil over medium high heat. Add bell pepper, peas, carrots, mushrooms, broccoli, baby corn, and water chestnuts. Sauté 2-3 minutes until veggies are almost tender.
+            <Text strong  style={{ color: "#fa8c16",fontSize: 18}}>•	Whisk:</Text> 
+            In a small bowl, whisk together soy sauce, garlic, brown sugar, sesame oil, chicken broth, and cornstarch.
+            <Text strong  style={{ color: "#fa8c16",fontSize: 18}}>•	Mix:</Text> 
+            Pour over veggies and cook until the sauce has thickened.
+            <Text strong style={{ color: "#fa8c16",fontSize: 18}}>•	Garnish:</Text> 
+            add chopped green onions and sesame seeds if desired.
+          
             </TabPane>
           </Tabs>
           <Divider />
@@ -113,14 +210,9 @@ export default class Home extends React.Component {
             <ul>
               <li>
                 Z9 Group
-                {/* <Link href="/signup">设计原则</Link> */}
+                {/* <Link href="/signup"></Link> */}
               </li>
-              {/* <li>
-                <Link href="/docs/spec/overview-cn">设计模式</Link>
-              </li>
-              <li>
-                <Link href="/docs/resources-cn">设计资源</Link>
-              </li> */}
+              
             </ul>
           </Paragraph>
           

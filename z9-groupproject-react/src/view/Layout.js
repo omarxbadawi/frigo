@@ -15,6 +15,7 @@ import SignupPage from './SignupPage';
 import cookbook from './cookbook';
 /* page detail */
 import detail from './detail';
+import logo from "../img/logo.jpg"
 
 import { Route, Switch, HashRouter, Link } from 'react-router-dom';
 import {
@@ -76,11 +77,12 @@ export default class HomePage extends React.Component {
             </Menu>
           </Sider>
           <Layout className="site-layout">
-            <Header className="site-layout-background" style={{ padding: 0, height: "60px" }}>
+            <Header className="site-layout-background" style={{ padding: 0, height: "85px" }}>
               
               <div className="head">
-                <h1 className="header_Frigo">FRIGO</h1>
-                {/* <span>login</span> */}
+                
+                
+                <img src={logo} style ={{width:"105px", height:"85px"}}></img>
               </div> 
 
             </Header>
